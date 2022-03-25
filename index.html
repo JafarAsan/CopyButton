@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+<right>
+<h1>LinkedIn Add Note</h1>
+<h2>Enter the name below</h2>
+
+<p>Click the button and enter the name.</p>
+
+<button onclick="myFunction()">Enter</button><br><br>
+<textarea id="demo" rows="10" cols="40"></textarea><br>
+<button onclick="copyT()">Copy text</button><br><br>
+
+<script>
+function myFunction() {
+  let person = prompt("Please enter name", "Harry Potter");
+  if (person != null) {
+  
+    document.getElementById("demo").innerHTML =
+    "Hi " + person + ",\nI am Jabar from VDart and I am Hiring for a Cloud Data Engineer in Bangalore, India(Remote). Please let me know if you are interested and kindly respond with your resume to jabar.k@vdartinc.com.\n\nKind & Regards\nJabar<br>+91 9384 929382\njabar.k@vdartinc.com";
+ } 
+}
+
+function copyT() {
+    
+    var Text = document.getElementById("demo");
+    Text.select();
+    navigator.clipboard.writeText(Text.value);
+    alert("Copied the text: "+Text);
+	}
+
+
+</script>
+</right>
+</body>
+</html>
